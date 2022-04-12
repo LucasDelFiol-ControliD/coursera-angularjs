@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html ng-app='DIApp'>
+    <head>
+        <title>Dependency Injection in Javascript (and AngularJS)</title>
+        <meta charset="utf-8">
+        <script src="../../Recursos/angular.js"></script>
+        <script src="app_min.js"></script>
+    </head>
+    <body>
+        <h1>Dependency Injection in Javascript (and AngularJS)</h1>
+        <div ng-controller='DIController'>
+            <!-- blur: caixa de texto não é selecionada -->
+            <input type="text" ng-model="name" ng-blur="upper();">
+        </div>
+    </body>
+</html>
