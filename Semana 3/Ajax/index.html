@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="MenuCategoriesApp">
+    <head>
+        <title>Ajax with $http service</title>
+        <meta charset="utf-8">
+        <script src="../../Recursos/angular.js"></script>
+        <script src="app.js"></script>
+        <style>
+            body {
+                font-size: 1.2em;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Ajax with $http service</h1>
+
+        <div ng-controller="MenuCategoriesController as menu">
+            <h3>List of Menu Categories</h3>
+            <ul>
+                <li ng-repeat="category in menu.categories">
+                    (<a href="" ng-click="menu.logMenuItems(category.short_name)">{{category.short_name}}</a>)
+                    {{category.name}}
+                </li>
+            </ul>
+        </div>
+    </body>
+</html>

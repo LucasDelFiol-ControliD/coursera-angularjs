@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html ng-app="ShoppingListDirectiveApp">
+    <head>
+        <title>Directives with Transclude</title>
+        <meta charset="utf-8">
+        <script src="../../Recursos/jquery-3.6.0.min.js"></script>
+        <script src="../../Recursos/angular.js"></script>
+        <script src="app.js"></script>
+        <style>
+            body {
+                font-size: 1.2em;
+            }
+            .error1 {
+                color: red;
+                font-weight: bold;
+            }
+            .error2 {
+                color: red;
+                font-weight: bold;
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Directives with Transclude</h1>
+
+        <!-- LIST #1 - unlimited items -->
+        <div ng-controller="ShoppingListController as list">
+            <input type="text" ng-model="list.itemName" placeholder="item name">
+            <input type="text" ng-model="list.itemQuantity" placeholder="quantity">
+            <button ng-click="list.addItem();">Add Item</button>
+            <span>{{list.lastRemoved}}</span>
+
+            <shopping-list items="list.items" title="{{list.title}}" on-remove="list.removeItem(index)">
+                <span class="error1">WARNING! WARNING! {{list.warning}}</span>
+            </shopping-list>
+            <shopping-list items="list.items" title="{{list.title}}" on-remove="list.removeItem(index)">
+                <div>
+                    <div class="error2">OH, THE HORROR!</div>
+                    <div>{{list.warning}}</div>
+                </div>
+            </shopping-list>
+        </div>
+    </body>
+</html>

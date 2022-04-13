@@ -29,7 +29,7 @@
         };
 
         list.removeItem = function(itemIndex) {
-            shoppingList.removeItem(itemIndex);
+            ShoppingListService.removeItem(itemIndex);
         };
     }
 
