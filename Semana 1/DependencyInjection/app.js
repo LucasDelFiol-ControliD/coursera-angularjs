@@ -14,3 +14,13 @@
         };
     }
 })();
+
+/*
+
+Design pattern: Dependency Injection (DI)
+Implements Inversion of Control (IoC)
+Client gets called with the dependency by some system
+ - In our case, the "system" is AngularJS
+Client is not responsible for instantiating the dependency
+
+*/
