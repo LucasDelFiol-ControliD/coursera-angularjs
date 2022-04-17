@@ -10,3 +10,7 @@ Comandos git:
 BrowserSync (visualizar no browser):
 
 - browser-sync start --server --directory --files "**/*"
+
+Visual Studio Code:
+- Ctrl + K + C: comenta as linhas selecionadas
+- Ctrl + K + U: descomenta as linhas selecionadas

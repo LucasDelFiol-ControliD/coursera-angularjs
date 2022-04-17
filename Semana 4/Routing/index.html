@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html ng-app='RoutingApp'>
+    <head>
+        <title>Intro to ui-router</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <h1>Intro to ui-router</h1>
+
+        <div class="tabs">
+            <a ui-sref="tab1" ui-sref-active="activeTab">Tab 1</a>
+            <a ui-sref="tab2" ui-sref-active="activeTab">Tab 2</a>
+            <!-- <button ui-sref="tab2">Tab 2</button> -->
+        </div>
+
+        <ui-view></ui-view>
+
+        <!-- Libraries -->
+        <script src="../../Recursos/angular.js"></script>
+        <script src="../../Recursos/angular-ui-router.min.js"></script>
+
+        <!-- Modules -->
+        <script src="app.js"></script>
+    </body>
+</html>

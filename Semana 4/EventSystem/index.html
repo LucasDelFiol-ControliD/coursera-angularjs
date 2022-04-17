@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app="ShoppingListEventsApp">
+    <head>
+        <title>Directives with Components</title>
+        <meta charset="utf-8">
+        <script src="../../Recursos/jquery-3.6.0.min.js"></script>
+        <script src="../../Recursos/angular.js"></script>
+        <script src="app.js"></script>
+        <style>
+            body {
+                font-size: 1.2em;
+            }
+            .error {
+                color: red;
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Directives with Components</h1>
+
+        <div ng-controller="ShoppingListController as list">
+            <input type="text" ng-model="list.itemName" placeholder="item name">
+            <input type="text" ng-model="list.itemQuantity" placeholder="quantity">
+            <button ng-click="list.addItem();">Add Item</button>
+            <span>{{list.lastRemoved}}</span>
+            <shopping-list items="list.items" title="{{list.title}}" bad-remove="list.removeItem" on-remove="list.removeItem(index)"></shopping-list>
+        </div>
+
+        <loading-spinner></loading-spinner>
+    </body>
+</html>
